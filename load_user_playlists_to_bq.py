@@ -7,7 +7,7 @@ import os
 spotify_access_token = os.environ.get('spotify_access_token', '<token>')
 gcp_project_id = os.environ.get('gcp_project_id', '<gcp_project_id>')
 target_dataset = os.environ.get('target_dataset', 'dev')
-secret_location = '/secrets/sa_key' if target_dataset == 'prod' else 'secrets/sa_key'
+secret_location = '/secret/SA_KEY' if target_dataset == 'prod' else 'secrets/sa_key'
 
 spotify = tk.Spotify(spotify_access_token)
 
