@@ -29,7 +29,7 @@ while results.next:
     results = spotify.next(results)
     playlists.extend(results.items)
 
-playlists = [pl for pl in playlists if "Your Top Songs" in pl.name]
+playlists = playlists[:6]
 json_payload = []
 
 for pl in playlists:
